@@ -1,7 +1,4 @@
-
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -14,6 +11,7 @@ p {
     line-height: 1.7em;
     color: #999;
 }
+
 a,
 a:hover,
 a:focus {
@@ -44,9 +42,99 @@ a:focus {
     margin: 40px 0;
 }
 
+.table>tbody>tr>td {
+    vertical-align: inherit;
+}
+
+.btn-primary {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
 i,
 span {
     display: inline-block;
+}
+
+/*-----------SREACH--------------*/
+
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 81%;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+.form-group {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 50%;
+    float: left;
+    width: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+    .topnav a,
+    .topnav input[type=text],
+    .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
 }
 
 /* ---------------------------------------------------
@@ -61,7 +149,7 @@ SIDEBAR STYLE
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #9933ff;
     color: #fff;
     transition: all 0.3s;
 }
@@ -114,7 +202,7 @@ SIDEBAR STYLE
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #9933ff;
 }
 
 #sidebar .sidebar-header strong {
@@ -145,9 +233,7 @@ SIDEBAR STYLE
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
 }
-
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -166,7 +252,6 @@ a[aria-expanded="true"]::before {
 a[aria-expanded="true"]::before {
     content: '\e260';
 }
-
 
 ul ul a {
     font-size: 0.9em !important;
@@ -200,11 +285,13 @@ a.article:hover {
 /* ---------------------------------------------------
 CONTENT STYLE
 ----------------------------------------------------- */
+
 #content {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
 }
+
 /* ---------------------------------------------------
 MEDIAQUERIES
 ----------------------------------------------------- */
@@ -228,20 +315,16 @@ MEDIAQUERIES
     #sidebar.active {
         margin-left: 0 !important;
     }
-
     #sidebar .sidebar-header h3,
     #sidebar .CTAs {
         display: none;
     }
-
     #sidebar .sidebar-header strong {
         display: block;
     }
-
     #sidebar ul li a {
         padding: 20px 10px;
     }
-
     #sidebar ul li a span {
         font-size: 0.85em;
     }
@@ -249,11 +332,9 @@ MEDIAQUERIES
         margin-right: 0;
         display: block;
     }
-
     #sidebar ul ul a {
         padding: 10px !important;
     }
-
     #sidebar ul li a i {
         font-size: 1.3em;
     }

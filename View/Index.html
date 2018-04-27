@@ -12,7 +12,7 @@
     <!-- Bootstrap Js CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../View/style/style.css">
-    <link rel="stylesheet" href="./style/register.css">
+    <link rel="stylesheet" href="../View/style/login.css">
     <script src="./js/style.js" type="text/javascript"></script>
 </head>
 
@@ -27,72 +27,32 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                <li>
+                    <a href="#homeSubmenu" aria-expanded="false">
                         <i class="glyphicon glyphicon-home"></i>
                         Home
                     </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-briefcase"></i>
-                        About
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                        <i class="glyphicon glyphicon-duplicate"></i>
-                        Pages
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="glyphicon glyphicon-link"></i>
-                        Portfolio
+                        <i class="glyphicon glyphicon-file"></i>
+                        File Mananget
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-paperclip"></i>
-                        FAQ
+                        <i class="glyphicon glyphicon-book"></i>
+                        History
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-send"></i>
-                        Contact
+                        <i class="glyphicon glyphicon-upload"></i>
+                        Upload
                     </a>
                 </li>
             </ul>
 
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <a href="#" class="download">abc</a>
-                </li>
-                <li>
-                    <a href="#" class="article">Back</a>
-                </li>
-            </ul>
         </nav>
 
         <!-- Page Content Holder -->
@@ -111,40 +71,65 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a class="navbar-brand" href="#">Login</a>
-                            </li>
-                            <li>
-                                <a class="navbar-brand" onclick="document.getElementById('id01').style.display='block'" href="#">Register</a>
+                                <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Login</button>
                                 <div id="id01" class="modal">
-                                    <form class="modal-content" action="#">
-                                        <div class="container" id="register">
+                                    <form class="modal-content animate">
+
+                                        <div class="imgcontainer">
                                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                                            <h1>Register</h1>
-                                            <p>Please fill in this form to create an account.</p>
-                                            <hr>
-                                            <input type="text" placeholder="User name" required>
-                                            <input type="text" placeholder="Enter Email" name="email" required>
-                                            <input type="password" placeholder="Enter Password" name="psw" required>
-                                            <input type="password" placeholder="Repeat Password" name="psw-repeat"  required>
+                                        </div>
+                                        <div>
+                                            <img src="../View/img/login.jpg" alt="login" />
+                                        </div>
+                                        <div class="container">
+                                            <div class="input-group">
+                                                <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                                            </div>
 
+                                            <div class="input-group">
+                                                <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                            </div>
+                                            <br>
                                             <label>
-                                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                                                <input type="checkbox" checked="checked" name="remember"> Remember me
                                             </label>
-
-                                            <p>By creating an account you agree to our
-                                                <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-                                            <div class="clearfix">
-                                                <button type="submit" class="signupbtn">Sign Up</button>
+                                            <br>
+                                            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                                            <br>
+                                            <div class="psw">
+                                                <a href="#">Forgot password?</a>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </li>
+                            <li>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">Register</button>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+
+            <div class="topnav">
+                <div class="form-group">
+                    <select class="form-control" id="sel1">
+                        <option>Category</option>
+                        <option value="">Thời Sự</option>
+                        <option value="">Sức Khoẻ</option>
+                        <option value="">Thể Thao</option>
+                    </select>
+                </div>
+                <div class="search-container">
+                    <form>
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
             <table class="table table-striped">
                 <thead>
                     <tr>
