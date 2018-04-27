@@ -20,6 +20,10 @@ a:focus {
     transition: all 0.3s;
 }
 
+label{
+    margin-bottom: 15px;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -33,6 +37,8 @@ a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .line {
@@ -44,11 +50,6 @@ a:focus {
 
 .table>tbody>tr>td {
     vertical-align: inherit;
-}
-
-.btn-primary {
-    margin-left: 10px;
-    margin-top: 10px;
 }
 
 i,
