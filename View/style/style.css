@@ -223,7 +223,7 @@ SIDEBAR STYLE
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: #7386D5 !important;
     background: #fff;
 }
 
