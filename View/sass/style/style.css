@@ -21,7 +21,8 @@ a:focus {
 }
 
 label{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top:20px;
 }
 
 .navbar {
@@ -90,7 +91,7 @@ span {
 
 .topnav input[type=text] {
     padding: 6px;
-    margin-top: 8px;
+    margin-top: 18px;
     font-size: 17px;
     border: none;
     width: 81%;
@@ -99,7 +100,7 @@ span {
 .topnav .search-container button {
     float: right;
     padding: 6px 10px;
-    margin-top: 8px;
+    margin-top: 18px;
     margin-right: 16px;
     background: #ddd;
     font-size: 17px;

@@ -119,42 +119,108 @@
                 </div>
             </div>
 
+            <!--ADD CATEGORY-->
+            <div class="input-file">
+                <span class="input-group-add">
+                    <button class="btn btn-default" type="button" onclick="document.getElementById('add_category').style.display='block'">
+                        <i class="glyphicon glyphicon-plus-sign"></i>
+                        Add Category
+                    </button>
+                </span>
+                <div id="add_category" class="modal">
+                    <form class="modal-content animate">
+
+                        <div class="container_form">
+
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('add_category').style.display='none'" class="close" title="Close">&times;</span>
+                            </div>
+
+                            <div class="input-group">
+                                <input id="add_cate" type="text" class="form-add" name="add_category" placeholder="Category name">
+                            </div>
+
+                            <button class="btn btn-lg btn-primary btn-add" type="submit">Add</button>
+
+                            <br>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>File Name</th>
-                        <th>Category</th>
-                        <th>Size</th>
-                        <th>Date upload</th>
-                        <th>Upload by </th>
-                        <th>Downloads</th>
+                        <th>Category Name </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>index.html</td>
-                        <td>Code</td>
-                        <td>10mb</td>
-                        <td>27/04/2018</td>
-                        <td>Phi đẹp trai</td>
-                        <td>69</td>
+                        <td>Thời Sự</td>
+                        <td>
+                            <button type="button" title="Update Category" class="btn btn-success" onclick="document.getElementById('update_category').style.display='block'">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </button>
+                            <!--UPDATE CATEGORY-->
+                            <div id="update_category" class="modal">
+                                <form class="modal-content animate">
+
+                                    <div class="container_form">
+
+                                        <div class="imgcontainer">
+                                            <span onclick="document.getElementById('update_category').style.display='none'" class="close" title="Close">&times;</span>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <input id="update_cate" type="text" class="form-add" name="update_category" value="Thời Sự">
+                                        </div>
+
+                                        <button class="btn btn-lg btn-primary btn-add" type="submit">Update</button>
+
+                                        <br>
+
+                                    </div>
+                                </form>
+                            </div>
+                            <!--END UPDATE CATEGORY-->
+                        </td>
+                        <td>
+                            <button type="button" title="Delete Category" class="btn btn-success">
+                                <i class="glyphicon glyphicon-trash"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>style.css</td>
-                        <td>Code</td>
-                        <td>10mb</td>
-                        <td>27/04/2018</td>
-                        <td>Phi đẹp trai</td>
-                        <td>69</td>
+                        <td>Thể Thao</td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <i class="glyphicon glyphicon-trash"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
-                        <td>style.js</td>
                         <td>Code</td>
-                        <td>10mb</td>
-                        <td>27/04/2018</td>
-                        <td>Phi đẹp trai</td>
-                        <td>69</td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <i class="glyphicon glyphicon-trash"></i>
+                            </button>
+                        </td>
                     </tr>
+
                 </tbody>
             </table>
         </div>
