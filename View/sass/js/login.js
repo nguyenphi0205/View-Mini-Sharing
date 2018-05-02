@@ -9,5 +9,5 @@ $(document).ready(function () {
             modal_log.style.display = "none";
             modal_reg.style.display = "none";
         }
-    }
+    };
 });

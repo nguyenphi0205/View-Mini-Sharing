@@ -30,39 +30,39 @@
             </div>
 
             <ul class="list-unstyled components">
-                    <li>
-                        <a href="admin_index.html" aria-expanded="false">
-                            <i class="glyphicon glyphicon-home"></i>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin_CRUD_user.html">
-                            <i class="glyphicon glyphicon-user"></i>
-                            User Management
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin_category.html">
-                            <i class="glyphicon glyphicon-list"></i>
-                            Category Management
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#history" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-book"></i>
-                            History
-                        </a>
-                        <ul class="collapse list-unstyled" id="history">
-                            <li>
-                                <a href="upload_history.html">Upload History</a>
-                            </li>
-                            <li>
-                                <a href="download_history.html">Download History</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <li>
+                    <a href="admin_index.html" aria-expanded="false">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_CRUD_user.html">
+                        <i class="glyphicon glyphicon-user"></i>
+                        User Management
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_category.html">
+                        <i class="glyphicon glyphicon-list"></i>
+                        Category Management
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#history" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-book"></i>
+                        History
+                    </a>
+                    <ul class="collapse list-unstyled" id="history">
+                        <li>
+                            <a href="upload_history.html">Upload History</a>
+                        </li>
+                        <li>
+                            <a href="download_history.html">Download History</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
         </nav>
 
@@ -120,53 +120,50 @@
                 </div>
             </div>
 
+
             <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>User Name </th>
+                        <th>Rank</th>
+                        <th>Is Admin</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="view_file">
+                    <tr>
+                        <td>Phi Nguyễn</td>
+                        <td>Silver</td>
+                        <td>Yes</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
                 <thead>
                     <tr>
                         <th>File Name</th>
                         <th>Category</th>
                         <th>Size</th>
-                        <th>Date Download</th>
-                        <th>Downloads</th>
-                        <th></th>
+                        <th>Date upload</th>
                     </tr>
                 </thead>
                 <tbody id="view_file">
                     <tr>
-                        <td>index.html</td>
+                        <td>Index.html</td>
                         <td>Code</td>
                         <td>10mb</td>
                         <td>27/04/2018</td>
-                        <td>69</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-trash"></i>
-                            </button>
-                        </td>
                     </tr>
                     <tr>
                         <td>style.css</td>
                         <td>Code</td>
                         <td>10mb</td>
                         <td>27/04/2018</td>
-                        <td>69</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-trash"></i>
-                            </button>
-                        </td>
                     </tr>
                     <tr>
                         <td>style.js</td>
                         <td>Code</td>
                         <td>10mb</td>
                         <td>27/04/2018</td>
-                        <td>69</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-trash"></i>
-                            </button>
-                        </td>
                     </tr>
                 </tbody>
             </table>

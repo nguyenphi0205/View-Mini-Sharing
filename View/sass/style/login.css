@@ -11,13 +11,16 @@ select {
 
 .input-group .form-control {
     position: relative;
-    z-index: 2;
-    width: 130%;
-    margin: 40px 19px 0 19px;
+    z-index: 0;
+    width: 134%;
+    margin: 40px 19px 0 10px;
     padding: 20px;
 }
+.input-group-btn:last-child>.btn{
+z-index: 0;
+}
 .select_type{
-    margin: 40px 19px 0 19px;
+    margin: 40px 19px 0 10px;
     width:224%;
 }
 
@@ -171,8 +174,8 @@ span.psw {
 
 .psw {
     float: left;
-    margin-left: 65%;
-    margin-top: -3%;
+    margin-left: 63%;
+    margin-top: -4%;
 }
 
 /* Add Zoom Animation */
