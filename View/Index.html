@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mini Sharing File</title>
+    <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap Js CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="sass/style/login.css">
     <link rel="stylesheet" href="sass/style/style.css">
+    <!-- JS -->
     <script src="sass/js/style.js" type="text/javascript"></script>
     <script src="sass/js/login.js" type="text/javascript"></script>
     <script src="sass/js/sreach.js" type="text/javascript"></script>
+    <script src="sass/js/upload.js" type="text/javascript"></script>
+
+
 </head>
 
-<body>
+<body ng-app="myApp">
 
     <div class="wrapper">
         <!-- Sidebar Holder -->
@@ -30,7 +37,7 @@
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="Index.html" aria-expanded="false">
+                    <a href="Index.html">
                         <i class="glyphicon glyphicon-home"></i>
                         Home
                     </a>
@@ -162,84 +169,53 @@
                     </div>
                 </div>
             </nav>
+            <div ng-controller="myCtrl">
+                <div class="topnav">
+                    <div class="form-group">
+                        <select class="form-control" id="filter_category" ng-model="select_search" ng-options="y.category for (x,y) in table">
+                        </select>
+                    </div>
+                    <div class="search-container">
+                        <form>
+                            <input type="text" id="search" placeholder="Search.." ng-model="input_search">
+                        </form>
+                    </div>
+                </div>
 
-            <div class="topnav">
-                <div class="form-group">
-                    <select class="form-control" id="filter_category" onchange="">
-                        <option>Category</option>
-                        <option value="">Thời Sự</option>
-                        <option value="">Sức Khoẻ</option>
-                        <option value="">Code</option>
-                    </select>
-                </div>
-                <div class="search-container">
-                    <form>
-                        <input type="text" id="search" placeholder="Search.." name="search">
-                        <button type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </form>
-                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Category</th>
+                            <th>Size</th>
+                            <th>Date upload</th>
+                            <th>Upload by </th>
+                            <th>Downloads</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="view_file">
+                        <tr ng-repeat="x in select_search.items | filter:input_search">
+                            <td>
+                                {{x.filename}}
+                            </td>
+                            <td>{{x.category}}</td>
+                            <td>{{x.size}}</td>
+                            <td>{{x.dateupload}}</td>
+                            <td>{{x.uploadby}}</td>
+                            <td>{{x.download}}</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <i class="glyphicon glyphicon-arrow-down"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>File Name</th>
-                        <th>Category</th>
-                        <th>Size</th>
-                        <th>Date upload</th>
-                        <th>Upload by </th>
-                        <th>Downloads</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="view_file">
-                    <tr>
-                        <td><a href="app/user/file_information.html">index.html</a></td>
-                        <td>tai</td>
-                        <td>10mb</td>
-                        <td>27/04/2018</td>
-                        <td>Phi đẹp trai</td>
-                        <td>69</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-arrow-down"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>style.css</td>
-                        <td>Code</td>
-                        <td>15mb</td>
-                        <td>28/04/2018</td>
-                        <td>Dung đẹp trai</td>
-                        <td>69</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-arrow-down"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>style.js</td>
-                        <td>Code</td>
-                        <td>10mb</td>
-                        <td>27/04/2018</td>
-                        <td>Phi đẹp trai</td>
-                        <td>69</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-arrow-down"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 
 </body>
-
 
 </html>
