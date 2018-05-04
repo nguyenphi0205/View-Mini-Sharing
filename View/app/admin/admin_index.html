@@ -109,17 +109,26 @@
 
             <!--SEARCH-->
             <div class="topnav">
-                <div class="form-group">
-                    <select class="form-control" ng-model="select_search" ng-options="y.category for (x,y) in table">
-                    </select>
+                    <div class="form-group">
+                        <div class="name_span">Category</div>
+                        <select class="form-control" ng-model="select_search" ng-options="y.category for (x,y) in table">
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <div class="name_span">File Name</div>
+                        <input class="form-control" type="text" placeholder="File name..">
+                    </div>
+    
+                    <div class="form-group">
+                        <div class="name_span">Uploader</div>
+                        <input class="form-control" type="text" placeholder="Uploader..">
+                    </div>
+                    <div class="search-container">
+                        <button type="submit">Search</button>
+                    </div>
                 </div>
-                <div class="search-container">
-                    <form>
-                        <input type="text" placeholder="Search.." ng-model="input_search">
-                    </form>
-                </div>
-            </div>
-
+    
             <div ng-view></div>
         </div>
     </div>
