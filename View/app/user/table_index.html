@@ -1,0 +1,30 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Category</th>
+            <th>Size</th>
+            <th>Date upload</th>
+            <th>Upload by </th>
+            <th>Downloads</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="view_file">
+        <tr ng-repeat="x in select_search.items | filter:input_search">
+            <td>
+                <a href="#!file_information">{{x.filename}}</a>
+            </td>
+            <td>{{x.category}}</td>
+            <td>{{x.size}}</td>
+            <td>{{x.dateupload}}</td>
+            <td>{{x.uploadby}}</td>
+            <td>{{x.download}}</td>
+            <td>
+                <button type="button" class="btn btn-success">
+                    <i class="glyphicon glyphicon-arrow-down"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

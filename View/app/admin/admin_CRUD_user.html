@@ -1,124 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mini Sharing File</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap Js CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../../sass/style/style.css">
-    <link rel="stylesheet" href="../../sass/style/login.css">
-    <link rel="stylesheet" href="../../sass/style/upload.css">
-    <script src="../../sass/js/style.js" type="text/javascript"></script>
-    <script src="../../sass/js/login.js" type="text/javascript"></script>
-    <script src="../../sass/js/sreach.js" type="text/javascript"></script>
-</head>
-
-<body>
-
-    <div class="wrapper">
-        <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>DXC Share File</h3>
-                <strong>DXC</strong>
-            </div>
-
-            <ul class="list-unstyled components">
-                <li>
-                    <a href="admin_index.html" aria-expanded="false">
-                        <i class="glyphicon glyphicon-home"></i>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_CRUD_user.html">
-                        <i class="glyphicon glyphicon-user"></i>
-                        User Management
-                    </a>
-                </li>
-                <li>
-                    <a href="admin_category.html">
-                        <i class="glyphicon glyphicon-list"></i>
-                        Category Management
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="#history" data-toggle="collapse" aria-expanded="false">
-                        <i class="glyphicon glyphicon-book"></i>
-                        History
-                    </a>
-                    <ul class="collapse list-unstyled" id="history">
-                        <li>
-                            <a href="upload_history.html">Upload History</a>
-                        </li>
-                        <li>
-                            <a href="download_history.html">Download History</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-        </nav>
-
-        <!-- Page Content Holder -->
-        <div id="content" class="container">
-
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-
-                    <div class="navbar-header">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                            <i class="glyphicon glyphicon-align-left"></i>
-                            <span>DXC Share</span>
-                        </button>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!--START LOGIN-->
-                            <li>
-                                <div class="navbar-header">
-                                    <button class="btn btn-info navbar-btn" type="button" onclick="document.getElementById('login_form').style.display='block'">Login</button>
-                                </div>
-                            </li>
-                            <!--END LOGIN-->
-
-                            <!--START REGISTER-->
-                            <li>
-                                <div class="navbar-header">
-                                    <button type="button" class="btn btn-info navbar-btn" onclick="document.getElementById('register_form').style.display='block'">Register</button>
-                                </div>
-                            </li>
-                            <!--END REGISTER-->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="topnav">
-                <div class="form-group">
-                    <select class="form-control" id="filter_category">
-                        <option>Category</option>
-                        <option value="news">News</option>
-                        <option value="sport">Sport</option>
-                        <option value="Code">Code</option>
-                    </select>
-                </div>
-                <div class="search-container">
-                    <form>
-                        <input id="search" type="text" placeholder="Search.." name="search">
-                        <button type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
 
             <!--ADD USER-->
             <div class="input-file">
@@ -183,7 +63,7 @@
                 </thead>
                 <tbody id="view_file">
                     <tr>
-                        <td><a href="admin_view_user_information.html">Phi Nguyễn</a></td>
+                        <td><a href="#!view_user_information">Phi Nguyễn</a></td>
                         <td>Silver</td>
                         <td>Yes</td>
                         <td>Active</td>
@@ -256,10 +136,3 @@
 
                 </tbody>
             </table>
-        </div>
-    </div>
-
-</body>
-
-
-</html>

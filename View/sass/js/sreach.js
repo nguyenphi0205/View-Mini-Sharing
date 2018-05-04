@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ["ngRoute"]);
 app.controller('myCtrl', function ($scope) {
 
   $scope.table = [{
@@ -9,28 +9,32 @@ app.controller('myCtrl', function ($scope) {
         size: "10mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }, {
         filename: "bóng rổ",
         category: "Sport",
         size: "15mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }, {
         filename: "Đá bóng",
         category: "Sport",
         size: "10mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }, {
         filename: "Tin Tức",
         category: "News",
         size: "15mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }]
     },
     {
@@ -41,14 +45,16 @@ app.controller('myCtrl', function ($scope) {
         size: "15mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }, {
         filename: "Đá bóng",
         category: "Sport",
         size: "10mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }]
     },
     {
@@ -59,7 +65,8 @@ app.controller('myCtrl', function ($scope) {
         size: "10mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }]
     },
     {
@@ -70,7 +77,8 @@ app.controller('myCtrl', function ($scope) {
         size: "10mb",
         dateupload: "27/04/2018",
         uploadby: "Phi đẹp trai",
-        download: "69"
+        download: "69",
+        comment: "This is template for DXCshare"
       }]
     },
   ];
