@@ -23,12 +23,16 @@ z-index: 0;
     margin: 40px 19px 0 10px;
     width:224%;
 }
-
+.til{
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: -35px;
+}
 .input-group .select_type:first-child{
     width: 333.75px;
 }
 .input-group .form-add {
-    margin-top: 70px;
+    margin-top: 40px;
     width: 115%;
     float: left;
 }
