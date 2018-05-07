@@ -1,154 +1,162 @@
+<!--ADD USER-->
+<div class="input-file">
+    <span class="input-group-add-user">
+        <button class="btn btn-default" title="Add User" type="button" onclick="document.getElementById('add_user').style.display='block'">
+            <i class="glyphicon glyphicon-plus-sign"></i>
+            Add User
+        </button>
+    </span>
+    <div id="add_user" class="modal">
 
+        <form class="modal-content animate">
 
-            <!--ADD USER-->
-            <div class="input-file">
-                <span class="input-group-add-user">
-                    <button class="btn btn-default" title="Add User" type="button" onclick="document.getElementById('add_user').style.display='block'">
-                        <i class="glyphicon glyphicon-plus-sign"></i>
-                        Add User
-                    </button>
-                </span>
-                <div id="add_user" class="modal">
+            <div class="container_form">
+
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('add_user').style.display='none'" class="close" title="Close">&times;</span>
+                </div>
+                <div class="til">
+                    <b>Username</b>
+                </div>
+                <div class="input-group">
+                    <input id="add_username" type="text" class="form-control" name="add_username" value="" placeholder="username">
+                </div>
+                <div class="til">
+                    <b>Email</b>
+                </div>
+                <div class="input-group">
+                    <input id="add_email" type="email" class="form-control" name="add_email" value="" placeholder="email">
+                </div>
+                <div class="til">
+                    <b>Password</b>
+                </div>
+                <div class="input-group">
+                    <input id="add_password" type="password" class="form-control" name="add_password" placeholder="password">
+                </div>
+                <div class="til">
+                    <b>Repeat Password</b>
+                </div>
+                <div class="input-group">
+                    <input id="repeat_password" type="password" class="form-control" name="repeat_password" placeholder="repeat password">
+                </div>
+                <div class="til">
+                    <b>Is Admin?</b>
+                </div>
+                <div class="input-group">
+                    <select class="select_type">
+                        <option value="2">User</option>
+                        <option value="3">Admin</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <button class="btn btn-lg btn-primary btn-user" type="submit">Add</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+<!--END ADD USER-->
+
+<table class="table table-striped" id="myTable">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">User Name
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(1)">Rank
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(2)">Is Admin
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(3)">Status
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="view_file">
+        <tr>
+            <td>
+                <a href="#!view_user_information">Phi Nguyễn</a>
+            </td>
+            <td>Silver</td>
+            <td>Yes</td>
+            <td>Active</td>
+            <td>
+                <button type="button" title="Update User" class="btn btn-success" onclick="document.getElementById('update_user').style.display='block'">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+                <!--UPDATE USER-->
+                <div id="update_user" class="modal">
 
                     <form class="modal-content animate">
 
                         <div class="container_form">
 
                             <div class="imgcontainer">
-                                <span onclick="document.getElementById('add_user').style.display='none'" class="close" title="Close">&times;</span>
+                                <span onclick="document.getElementById('update_user').style.display='none'" class="close" title="Close">&times;</span>
                             </div>
-                            <div class="til">
-                                    <b>Username</b>
-                                </div>
-                            <div class="input-group">
-                                <input id="add_username" type="text" class="form-control" name="add_username" value="" placeholder="username">
+                            <div class="til_form">
+                                <b>Status</b>
                             </div>
-                            <div class="til">
-                                    <b>Email</b>
-                                </div>
-                            <div class="input-group">
-                                <input id="add_email" type="email" class="form-control" name="add_email" value="" placeholder="email">
-                            </div>
-                            <div class="til">
-                                    <b>Password</b>
-                                </div>
-                            <div class="input-group">
-                                <input id="add_password" type="password" class="form-control" name="add_password" placeholder="password">
-                            </div>
-                            <div class="til">
-                                    <b>Repeat Password</b>
-                                </div>
-                            <div class="input-group">
-                                <input id="repeat_password" type="password" class="form-control" name="repeat_password" placeholder="repeat password">
-                            </div>
-                            <div class="til">
-                                    <b>Is Admin?</b>
-                                </div>
                             <div class="input-group">
                                 <select class="select_type">
-                                    <option value="2">User</option>
-                                    <option value="3">Admin</option>
+                                    <option value="active" selected="selected">Active</option>
+                                    <option value="disable">Disable</option>
                                 </select>
                             </div>
-
+                            <div class="til_form">
+                                <b>Rank</b>
+                            </div>
+                            <div class="input-group">
+                                <select class="select_type">
+                                    <option value="bronze">Bronze</option>
+                                    <option value="silver" selected="selected">Silver</option>
+                                    <option value="gold">Gold</option>
+                                </select>
+                            </div>
+                            <div class="til_form">
+                                <b>Is Admin?</b>
+                            </div>
+                            <div class="input-group">
+                                <select class="select_type">
+                                    <option value="user">User</option>
+                                    <option value="admin" selected="selected">Admin</option>
+                                </select>
+                            </div>
                             <br>
-
-                            <button class="btn btn-lg btn-primary btn-user" type="submit">Add</button>
-
+                            <button class="btn btn-lg btn-primary btn-user" type="submit">Update</button>
                         </div>
                     </form>
                 </div>
-            </div>
-            <!--END ADD USER-->
+                <!--END UPDATE USER-->
+            </td>
+        </tr>
+        <tr>
+            <td>Tài Phan</td>
+            <td>Silver</td>
+            <td>Yes</td>
+            <td>Disable</td>
+            <td>
+                <button type="button" class="btn btn-success">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>Oanh Nguyễn</td>
+            <td>Silver</td>
+            <td>No</td>
+            <td>Active</td>
+            <td>
+                <button type="button" class="btn btn-success">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+            </td>
+        </tr>
 
-            <table class="table table-striped" id="myTable">
-                <thead>
-                    <tr>
-                        <th onclick="sortTable(0)">User Name<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-                        <th onclick="sortTable(1)">Rank<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-                        <th onclick="sortTable(2)">Is Admin<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-                        <th onclick="sortTable(3)">Status<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="view_file">
-                    <tr>
-                        <td><a href="#!view_user_information">Phi Nguyễn</a></td>
-                        <td>Silver</td>
-                        <td>Yes</td>
-                        <td>Active</td>
-                        <td>
-                            <button type="button" title="Update User" class="btn btn-success" onclick="document.getElementById('update_user').style.display='block'">
-                                <i class="glyphicon glyphicon-pencil"></i>
-                            </button>
-                            <!--UPDATE USER-->
-                            <div id="update_user" class="modal">
-
-                                <form class="modal-content animate">
-
-                                    <div class="container_form">
-
-                                        <div class="imgcontainer">
-                                            <span onclick="document.getElementById('update_user').style.display='none'" class="close" title="Close">&times;</span>
-                                        </div>
-                                        <div class="til_form">
-                                                <b>Status</b>
-                                            </div>
-                                        <div class="input-group">
-                                            <select class="select_type">
-                                                <option value="active" selected="selected">Active</option>
-                                                <option value="disable">Disable</option>
-                                            </select>
-                                        </div>
-                                        <div class="til_form">
-                                                <b>Rank</b>
-                                            </div>
-                                        <div class="input-group">
-                                            <select class="select_type">
-                                                <option value="bronze">Bronze</option>
-                                                <option value="silver" selected="selected">Silver</option>
-                                                <option value="gold">Gold</option>
-                                            </select>
-                                        </div>
-                                        <div class="til_form">
-                                                <b>Is Admin?</b>
-                                            </div>
-                                        <div class="input-group">
-                                            <select class="select_type">
-                                                <option value="user">User</option>
-                                                <option value="admin" selected="selected">Admin</option>
-                                            </select>
-                                        </div>
-                                        <br>
-                                        <button class="btn btn-lg btn-primary btn-user" type="submit">Update</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!--END UPDATE USER-->
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tài Phan</td>
-                        <td>Silver</td>
-                        <td>Yes</td>
-                        <td>Disable</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-pencil"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Oanh Nguyễn</td>
-                        <td>Silver</td>
-                        <td>No</td>
-                        <td>Active</td>
-                        <td>
-                            <button type="button" class="btn btn-success">
-                                <i class="glyphicon glyphicon-pencil"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
+    </tbody>
+</table>

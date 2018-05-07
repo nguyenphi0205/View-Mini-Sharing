@@ -71,10 +71,16 @@ label {
 }
 
 
+.table>tbody>tr>td:nth-child(2) {
+    text-align: left;
+}
+
 .table>thead:first-child>tr:first-child>th {
     text-align: center;
 }
-
+.table>thead>tr>th:nth-child(2) {
+    text-align: left !important;
+}
 i {
     display: inline-block;
 }

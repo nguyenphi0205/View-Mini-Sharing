@@ -1,64 +1,82 @@
 <table id="myTable" class="table table-striped">
     <thead>
         <tr>
-            <th onclick="sortTable(0)">File Name<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-            <th onclick="sortTable(1)">Category<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-            <th onclick="sortTable(2)">Size<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-            <th onclick="sortTable(3)">Date upload<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-            <th onclick="sortTable(4)">Upload by<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
-            <th onclick="sortTable(5)">Downloads<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
+                <th onclick="sortTable(0)">STT
+                        <img class="sort" src="assets/img/sort_table.jpg" />
+                    </th>
+            <th onclick="sortTable(1)">File Name
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(2)">Category
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(3)">Size
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(4)">Date upload
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(5)">Upload by
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
+            <th onclick="sortTable(6)">Downloads
+                <img class="sort" src="assets/img/sort_table.jpg" />
+            </th>
             <th></th>
             <th></th>
         </tr>
     </thead>
     <tbody id="view_file">
         <tr ng-repeat="x in select_search.items | filter:input_search">
-            <td>
-                <a href="#!file_information">{{x.filename}}</a>
-            </td>
-            <td>{{x.category}}</td>
-            <td>{{x.size}}</td>
-            <td>{{x.dateupload}}</td>
-            <td>{{x.uploadby}}</td>
-            <td>{{x.download}}</td>
-            <td>
-                <button type="button" class="btn btn-success" onclick="document.getElementById('update_file').style.display='block'">
-                    <i class="glyphicon glyphicon-pencil"></i>
-                </button>
-                <!--UPDATE FILE-->
-                <div id="update_file" class="modal">
+            <div ng-repeat="row in select_search.items">
+                <td>{{$index +1}}</td>
+                <td>
+                    <a href="#!file_information">{{x.filename}}</a>
+                </td>
+                <td>{{x.category}}</td>
+                <td>{{x.size}}</td>
+                <td>{{x.dateupload}}</td>
+                <td>{{x.uploadby}}</td>
+                <td>{{x.download}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" onclick="document.getElementById('update_file').style.display='block'">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </button>
+                    <!--UPDATE FILE-->
+                    <div id="update_file" class="modal">
 
-                    <form class="modal-content animate">
+                        <form class="modal-content animate">
 
-                        <div class="container_form">
+                            <div class="container_form">
 
-                            <div class="imgcontainer">
-                                <span onclick="document.getElementById('update_file').style.display='none'" class="close" title="Close">&times;</span>
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('update_file').style.display='none'" class="close" title="Close">&times;</span>
+                                </div>
+                                <div class="til_form">
+                                    <b>File name</b>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="file_name" value="index.html">
+                                </div>
+                                <div class="til_form">
+                                    <b>Comment</b>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="file_comment" value="This is template for DXCshare">
+                                </div>
+                                <br>
+                                <button class="btn btn-lg btn-primary btn-user" type="submit">Update</button>
                             </div>
-                            <div class="til_form">
-                                <b>File name</b>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="file_name" value="index.html">
-                            </div>
-                            <div class="til_form">
-                                <b>Comment</b>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="file_comment" value="This is template for DXCshare">
-                            </div>
-                            <br>
-                            <button class="btn btn-lg btn-primary btn-user" type="submit">Update</button>
-                        </div>
-                    </form>
-                </div>
-                <!--END UPDATE FILE-->
-            </td>
-            <td>
-                <button type="button" class="btn btn-success">
-                    <i class="glyphicon glyphicon-trash"></i>
-                </button>
-            </td>
+                        </form>
+                    </div>
+                    <!--END UPDATE FILE-->
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </button>
+                </td>
+            </div>
         </tr>
     </tbody>
 </table>
