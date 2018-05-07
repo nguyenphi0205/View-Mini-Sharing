@@ -16,26 +16,39 @@ select {
     margin: 40px 19px 0 8px;
     padding: 20px;
 }
-.input-group-btn:last-child>.btn{
-z-index: 0;
+
+.input-group-btn:last-child>.btn {
+    z-index: 0;
 }
-.select_type{
+
+.select_type {
     margin: 40px 19px 0 10px;
-    width:224%;
+    width: 224%;
 }
-.til{
+
+.til {
     margin-left: 10px;
     margin-top: 20px;
     margin-bottom: -35px;
 }
-.input-group .select_type:first-child{
+
+.til_form {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: -35px;
+    text-align: left;
+}
+
+.input-group .select_type:first-child {
     width: 333.75px;
 }
+
 .input-group .form-add {
     margin-top: 40px;
     width: 115%;
     float: left;
 }
+
 .btn-user {
     width: 25%;
     margin: 5px 137px 0 137px;
@@ -45,6 +58,7 @@ z-index: 0;
     -o-border-radius: 10px;
     border-radius: 25px;
 }
+
 .btn-add {
     width: 25%;
     float: right;

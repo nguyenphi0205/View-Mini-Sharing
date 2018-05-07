@@ -15,23 +15,23 @@ app.controller('myCtrl', function ($scope) {
         filename: "bóng rổ",
         category: "Sport",
         size: "15mb",
-        dateupload: "27/04/2018",
+        dateupload: "25/04/2018",
         uploadby: "Phi đẹp trai",
         download: "69",
-        comment: "This is template for DXCshare"
+        comment: "This is template for DXCsharex"
       }, {
-        filename: "Đá bóng",
+        filename: "dá bóng",
         category: "Sport",
-        size: "10mb",
-        dateupload: "27/04/2018",
+        size: "20mb",
+        dateupload: "28/04/2018",
         uploadby: "Phi đẹp trai",
         download: "69",
         comment: "This is template for DXCshare"
       }, {
-        filename: "Tin Tức",
+        filename: "tin Tức",
         category: "News",
-        size: "15mb",
-        dateupload: "27/04/2018",
+        size: "25mb",
+        dateupload: "26/04/2018",
         uploadby: "Phi đẹp trai",
         download: "69",
         comment: "This is template for DXCshare"
@@ -43,15 +43,15 @@ app.controller('myCtrl', function ($scope) {
         filename: "bóng rổ",
         category: "Sport",
         size: "15mb",
-        dateupload: "27/04/2018",
+        dateupload: "25/04/2018",
         uploadby: "Phi đẹp trai",
         download: "69",
         comment: "This is template for DXCshare"
       }, {
-        filename: "Đá bóng",
+        filename: "dá bóng",
         category: "Sport",
-        size: "10mb",
-        dateupload: "27/04/2018",
+        size: "20mb",
+        dateupload: "28/04/2018",
         uploadby: "Phi đẹp trai",
         download: "69",
         comment: "This is template for DXCshare"
@@ -72,10 +72,10 @@ app.controller('myCtrl', function ($scope) {
     {
       category: "news",
       items: [{
-        filename: "Tin Tức",
+        filename: "tin Tức",
         category: "News",
-        size: "10mb",
-        dateupload: "27/04/2018",
+        size: "25mb",
+        dateupload: "26/04/2018",
         uploadby: "Phi đẹp trai",
         download: "69",
         comment: "This is template for DXCshare"

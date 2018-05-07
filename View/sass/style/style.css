@@ -25,6 +25,13 @@ label {
     margin-top: 20px;
 }
 
+.sort {
+    height: 20px;
+    width: 20px;
+    margin: 0 0 0 6px;
+    border: 2px solid #000;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -52,11 +59,20 @@ label {
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
 }
-.table{
-    margin-top:20px;
+
+.table {
+    margin-top: 20px;
 }
+
+
+
 .table>tbody>tr>td {
-    vertical-align: inherit;
+    text-align: center;
+}
+
+
+.table>thead:first-child>tr:first-child>th {
+    text-align: center;
 }
 
 i {

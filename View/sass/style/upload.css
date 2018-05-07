@@ -27,7 +27,12 @@
     float: right;
 }
 
+.input-group-add-user {
+    margin-top: 30px;
+    margin-left: 99%;
+}
+
 .input-group-add {
     margin-top: 30px;
-    margin-left: 95%;
+    margin-left: 94%;
 }

@@ -1,13 +1,12 @@
-<table class="table table-striped">
+<table id="myTable" class="table table-striped">
     <thead>
         <tr>
-            <th>File Name</th>
-            <th>Category</th>
-            <th>Size</th>
-            <th>Date upload</th>
-            <th>Upload by </th>
-            <th>Downloads</th>
-            <th>Comment</th>
+            <th onclick="sortTable(0)">File Name<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
+            <th onclick="sortTable(1)">Category<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
+            <th onclick="sortTable(2)">Size<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
+            <th onclick="sortTable(3)">Date upload<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
+            <th onclick="sortTable(4)">Upload by<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
+            <th onclick="sortTable(5)">Downloads<img class="sort" src="../../assets/img/sort_table.jpg"/></th>
             <th></th>
             <th></th>
         </tr>
@@ -22,7 +21,6 @@
             <td>{{x.dateupload}}</td>
             <td>{{x.uploadby}}</td>
             <td>{{x.download}}</td>
-            <td>{{x.comment}}</td>
             <td>
                 <button type="button" class="btn btn-success" onclick="document.getElementById('update_file').style.display='block'">
                     <i class="glyphicon glyphicon-pencil"></i>
@@ -37,13 +35,13 @@
                             <div class="imgcontainer">
                                 <span onclick="document.getElementById('update_file').style.display='none'" class="close" title="Close">&times;</span>
                             </div>
-                            <div class="til">
+                            <div class="til_form">
                                 <b>File name</b>
                             </div>
                             <div class="input-group">
                                 <input type="text" class="form-control" name="file_name" value="index.html">
                             </div>
-                            <div class="til">
+                            <div class="til_form">
                                 <b>Comment</b>
                             </div>
                             <div class="input-group">
