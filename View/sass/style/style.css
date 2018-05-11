@@ -25,6 +25,12 @@ label {
     margin-top: 20px;
 }
 
+.sort_tb {
+    border: 0;
+    background-color: white;
+    color: black
+}
+
 .sort {
     height: 20px;
     width: 20px;
@@ -64,12 +70,9 @@ label {
     margin-top: 20px;
 }
 
-
-
 .table>tbody>tr>td {
     text-align: center;
 }
-
 
 .table>tbody>tr>td:nth-child(2) {
     text-align: left;
@@ -78,9 +81,11 @@ label {
 .table>thead:first-child>tr:first-child>th {
     text-align: center;
 }
+
 .table>thead>tr>th:nth-child(2) {
     text-align: left !important;
 }
+
 i {
     display: inline-block;
 }

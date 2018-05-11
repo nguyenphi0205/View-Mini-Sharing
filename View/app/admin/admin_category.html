@@ -15,8 +15,8 @@
                     <span onclick="document.getElementById('add_category').style.display='none'" class="close" title="Close">&times;</span>
                 </div>
                 <div class="til">
-                        <b>Category Name</b>
-                    </div>
+                    <b>Category Name</b>
+                </div>
                 <div class="input-group">
                     <input id="add_cate" type="text" class="form-add" name="add_category" placeholder="Category name">
                 </div>
@@ -33,7 +33,14 @@
 <table class="table table-striped" id="myTable">
     <thead>
         <tr>
-            <th onclick="sortTable(0)">Category Name<img class="sort" src="assets/img/sort_table.jpg"/></th>
+            <th onclick="sortTable(0)">STT
+                <a href=""><img class="sort" src="../../assets/img/sort_table.jpg" /><a>
+            </th>
+            <th onclick="sortTable(1)">Category Name
+                <a href="">
+                    <img class="sort" src="../../assets/img/sort_table.jpg" />
+                    <a>
+            </th>
             <th></th>
             <th></th>
 
@@ -41,6 +48,7 @@
     </thead>
     <tbody id="view_file">
         <tr>
+            <td>1</td>
             <td>Thời Sự</td>
             <td>
                 <button type="button" title="Update Category" class="btn btn-success" onclick="document.getElementById('update_category').style.display='block'">
@@ -56,8 +64,8 @@
                                 <span onclick="document.getElementById('update_category').style.display='none'" class="close" title="Close">&times;</span>
                             </div>
                             <div class="til_form">
-                                    <b>Category Name</b>
-                                </div>
+                                <b>Category Name</b>
+                            </div>
                             <div class="input-group">
                                 <input id="update_cate" type="text" class="form-add" name="update_category" value="Thời Sự">
                             </div>
@@ -78,6 +86,7 @@
             </td>
         </tr>
         <tr>
+            <td>2</td>
             <td>Thể Thao</td>
             <td>
                 <button type="button" class="btn btn-success">
@@ -91,6 +100,7 @@
             </td>
         </tr>
         <tr>
+            <td>3</td>
             <td>Code</td>
             <td>
                 <button type="button" class="btn btn-success">

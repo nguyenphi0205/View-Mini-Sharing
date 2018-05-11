@@ -9,6 +9,20 @@ select {
     box-sizing: border-box;
 }
 
+#chart-container-fileCate {
+    float: left;
+}
+
+#chart-container-userStatus {
+    margin-left: 530px;
+    margin-top:30px;
+}
+
+.error {
+    color: red;
+    margin: 10px;
+}
+
 .input-group .form-control {
     position: relative;
     z-index: 0;

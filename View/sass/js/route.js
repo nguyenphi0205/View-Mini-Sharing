@@ -1,5 +1,4 @@
-app.config(function ($routeProvider,$locationProvider) {
-    $locationProvider.html5Mode(true);
+app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "app/user/table_index.html"
